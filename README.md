@@ -36,12 +36,15 @@ exports.grpc = {
 };
 ```
 
-## Configuration
+## Configuration 支持多端配置
 
 ```js
 // {app_root}/config/config.default.js
 exports.grpc = {
-  endpoint: 'localhost:50051',
+  endpoint: {
+    auth: 'localhost:50051',
+    info: 'localhost:50052',
+  },
   // dir: 'app/proto', // proto files dir, relative path
   // property: 'grpc', // default attach to `ctx.grpc.**`
   // loadOpts: { convertFieldsToCamelCase: true, }, // message field case: `string user_name` -> `userName`
