@@ -42,8 +42,8 @@ exports.grpc = {
 // {app_root}/config/config.default.js
 exports.grpc = {
   endpoint: {
-    auth: 'localhost:50051',
-    info: 'localhost:50052',
+    auth: 'localhost:50051', // proto的文件命名需要一一对应
+    share: 'localhost:50052',
   },
   // dir: 'app/proto', // proto files dir, relative path
   // property: 'grpc', // default attach to `ctx.grpc.**`
